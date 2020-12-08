@@ -1,0 +1,62 @@
+ion-header {
+    ion-toolbar {
+        
+        ion-title {
+            
+            background-image: url(../images/banner.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: row;
+            margin: 0 auto;
+            .wishItem {
+            
+                background-color: rgba(69, 136, 69, 0.5);
+               
+                text-align: center;
+                justify-content: center;
+                display: flex;
+                font-size: 40px;
+                font-family: 'PT Sans', sans-serif;
+                margin-bottom: 5px;
+            }
+        }
+        
+    }
+}
+
+
+ion-content {
+    height: 500px;
+    ion-list {
+        background-color: white;
+        background-image: url(../images/snow1.png);
+        background-size: cover;
+        .wishImage {
+            width: 50%;
+            border-radius: 10px;
+            margin: 0 auto;
+            margin-bottom: 25px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border: 3px solid black;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .wishPrice {
+            font-family: 'Mountains of Christmas', cursive;
+            background-color: white;
+            width: 50%;
+            margin: 0 auto;
+        }
+        .wishBuy {
+            font-family: 'Mountains of Christmas', cursive;
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+}

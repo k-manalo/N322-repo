@@ -1,0 +1,34 @@
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>
+      <ion-buttons>
+      <ion-back-button defaultHref="/home" routerDirection="backward">
+        
+
+      </ion-back-button>
+    </ion-buttons>
+    <ion-label class="wishItem">{{ wish.item }}</ion-label>
+  </ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item class="wishImage" style="background-image: url({{wish.url}})">
+      <ion-label>{{ wish.giver }} wants this</ion-label>
+    </ion-item>
+    
+    <ion-item class="wishPrice">
+      <ion-label>{{ wish.price }}</ion-label>
+    </ion-item>
+    
+    <ion-item class="wishBuy">
+      <ion-label>{{ wish.buy }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+

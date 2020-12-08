@@ -1,0 +1,64 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>
+
+      <div class="logoDiv"></div>
+
+      <div class="titleDiv">
+        <h1>Christmas Wishes</h1>
+      </div>
+      
+      <div class="searchDiv">
+        <ion-button class="searchBtn" (click)="searchName(searchValue)" >Search</ion-button>
+        <input  type="text" class="search-name" placeholder="Search Name" style="width: 200px; color: black;" [(ngModel)]="searchValue">
+      </div>
+      
+
+    </ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-buttons style="background-color: white;">
+    <ion-button style="margin: 0 auto; margin-top: 30px; margin-bottom: 30px; background-color: rgb(96, 197, 96); border-radius: 5px;" (click)="addWish()" class="makeWish">Make A Wish</ion-button>
+  </ion-buttons>
+
+
+  <ion-list lines="none">
+    
+    <ion-item class="wishList" *ngFor="let wish of dataService.wishlists" style="background-image: url({{wish.url}})">
+      
+        <ion-item class="wishContent" >
+          <ion-label class="wishName">
+          {{ wish.item }}
+          </ion-label>
+          
+        </ion-item>
+        <ion-button class="viewBtn" routerLink="/wish/{{wish.id}}" routerDirection="forward" >View</ion-button>
+        <ion-button class="updateBtn" (click)="updateWish(wish)"> Update</ion-button>
+        <ion-button class="deleteBtn" (click)="deleteWish(wish)" color="danger"> Delete</ion-button>
+    </ion-item>
+
+    
+    <ion-list>
+      <ion-item class="wishList" *ngFor="let wish of dataService.filterWishlists" style="background-image: url({{wish.url}})">
+          <ion-item class="wishContent" >
+            <ion-label class="wishName">
+             {{ wish.giver }} wishes for this {{ wish.item }}
+            </ion-label>
+            
+          </ion-item>
+          <ion-button routerLink="/wish/{{wish.id}}" routerDirection="forward" >View</ion-button>
+          <ion-button (click)="updateWish(wish)"> Update</ion-button>
+          <ion-button (click)="deleteWish(wish)" color="danger"> Delete</ion-button>
+        </ion-item>
+    </ion-list>
+    
+</ion-list>
+</ion-content>
