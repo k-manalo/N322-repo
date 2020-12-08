@@ -14,3 +14,5 @@ The app does not include any apis and uses localhosting.
 Users are able to create a 'Wish', as well as update or delete wishes via the home page.
 When creating a wish I found the best way to upload an image was to copy the image address of an image online and paste it into the url field.
 When viewing a wish users can find the remaining details about the wish
+
+Github was acting strange at the time of upload and wasn't allowing me to upload the entire folder. Instead I only uploaded the main files.
